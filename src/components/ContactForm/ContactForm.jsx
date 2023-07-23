@@ -1,8 +1,8 @@
 import React from 'react';
 import css from './ContactForm.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from '../redux/operations';
-import { selectContacts } from '../redux/selectors';
+import { addContact } from '../../redux/contacts/operations';
+import { selectContacts } from '../../redux/contacts/selectors';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
@@ -11,13 +11,13 @@ export const ContactForm = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     const formValue = e.currentTarget;
-    const fullname = formValue.elements.fullname.value;
-    const phone = formValue.elements.phone.value;
+    const name = formValue.elements.name.value;
+    const number = formValue.elements.number.value;
 
-    if (list.some(elem => elem.fullname === fullname)) {
-      alert(fullname + ' is already in contacts');
+    if (list.some(elem => elem.name === name)) {
+      alert(name + ' is already in contacts');
     } else {
-      dispatch(addContact({ fullname, phone }));
+      dispatch(addContact({ name, number }));
     }
 
     formValue.reset();
@@ -27,7 +27,7 @@ export const ContactForm = () => {
     <form className={css.contactForm} onSubmit={handleSubmit}>
       <input
         type="text"
-        name="fullname"
+        name="name"
         placeholder="Name"
         pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
         title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
@@ -35,7 +35,7 @@ export const ContactForm = () => {
       />
       <input
         type="tel"
-        name="phone"
+        name="number"
         placeholder="Phone number"
         pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
         title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"

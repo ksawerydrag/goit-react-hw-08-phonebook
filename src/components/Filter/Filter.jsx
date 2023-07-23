@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { setFilterQuery } from '../redux/Slices/filterSlice';
+import { setFilterQuery } from '../../redux/filter/slice';
 import css from './Filter.module.css';
 
 export const Filter = () => {

@@ -2,8 +2,9 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Filter } from 'components/Filter/Filter';
 import { ContactListItem } from '../ContactListItem/ContactListItem';
-import { selectContacts, selectFilter, selectLoading, selectError } from '../redux/selectors';
-import { fetchContacts } from 'components/redux/operations';
+import { selectContacts, selectLoading, selectError } from '../../redux/contacts/selectors';
+import {selectFilter} from '../../redux/filter/selectors';
+import { fetchContacts } from 'redux/contacts/operations';
 
 export const ContactList = () => {
   const dispatch = useDispatch();
@@ -17,7 +18,7 @@ export const ContactList = () => {
   }, [dispatch]);
 
   const filteredContacts = list.filter(elem =>
-    elem.fullname.toLowerCase().includes(filter.toLowerCase())
+    elem.name.toLowerCase().includes(filter.toLowerCase())
   );
 
   return (
