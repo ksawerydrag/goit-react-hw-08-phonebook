@@ -1,0 +1,23 @@
+.elemStyle {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.btnStyle {
+  border-radius: 40px;
+  height: 40px;
+  width: 60px;
+  background-color: rgb(49, 198, 236);
+  color: white;
+  border: 0;
+  font-weight: bold;
+}
+
+.btnStyle:hover {
+  background-color: red;
+}
