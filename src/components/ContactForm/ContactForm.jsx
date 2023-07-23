@@ -23,7 +23,8 @@ export const ContactForm = () => {
     formValue.reset();
   };
 
-  return (
+  return (<>
+  <h1 className={css.pageTitle}>Phonebook</h1>
     <form className={css.contactForm} onSubmit={handleSubmit}>
       <input
         type="text"
@@ -45,5 +46,6 @@ export const ContactForm = () => {
         Add contact
       </button>
     </form>
+    </>
   );
 };
