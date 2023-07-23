@@ -5,6 +5,7 @@ import { ContactListItem } from '../ContactListItem/ContactListItem';
 import { selectContacts, selectLoading, selectError } from '../../redux/contacts/selectors';
 import {selectFilter} from '../../redux/filter/selectors';
 import { fetchContacts } from 'redux/contacts/operations';
+import css from './ContactList.module.css';
 
 export const ContactList = () => {
   const dispatch = useDispatch();
@@ -24,10 +25,10 @@ export const ContactList = () => {
   return (
     <>
     {error && <p>{error}</p>}
+      {list.length > 0 && <h2 className={css.listTitle}>Contacts</h2>}
       {list.length > 0 && <Filter />}
-      {list.length > 0 && <h2>Contacts</h2>}
       {loading && <p>Loading contacts...</p>}
-      <ul>
+      <ul className={css.contactList}>
         {filteredContacts.map(contact => (
           <li key={contact.id}>
             <ContactListItem contact={contact} />

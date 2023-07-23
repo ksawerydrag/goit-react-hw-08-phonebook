@@ -1,12 +1,11 @@
-.link {
+.navLink {
+  width: 100px;
     display: inline-block;
     text-decoration: none;
-    padding: 12px;
+    text-align: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 4px;
     font-weight: 700;
-    color: #2a363b;
+    color: #000000;
   }
-  
-  .link.active {
-    color: #e84a5f;
-  }
-  

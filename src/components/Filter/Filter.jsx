@@ -12,9 +12,9 @@ export const Filter = () => {
   };
 
   return (
-    <div>
+    <div className={css.filterWrapper}>
       <input
-        className={css.findInput}
+        className={css.filterInput}
         onChange={handleFilterChange}
         type="text"
         name="filter"

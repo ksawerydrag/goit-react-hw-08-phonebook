@@ -3,4 +3,19 @@
   flex-direction: column;
   gap: 10px;
   width: 200px;
+  margin-bottom: 20px;
+}
+
+.btnStyle {
+  border-radius: 5px;
+  height: 30px;
+  width: 200px;
+  background-color: #1573df;
+  color: white;
+  border: 0;
+  font-weight: bold;
+}
+
+.btnStyle:hover {
+  background-color: rgb(17, 184, 70);
 }

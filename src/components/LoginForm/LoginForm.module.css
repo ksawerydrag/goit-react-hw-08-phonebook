@@ -5,6 +5,19 @@
   .label {
     display: flex;
     flex-direction: column;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
   
+  .btnStyle {
+    border-radius: 5px;
+    height: 35px;
+    width: 100px;
+    background-color: #1573df;
+    color: white;
+    border: 0;
+    font-weight: bold;
+  }
+  
+  .btnStyle:hover {
+    background-color: rgb(17, 184, 70);
+  }
