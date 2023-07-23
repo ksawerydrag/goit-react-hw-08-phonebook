@@ -17,7 +17,7 @@ export default function Contacts() {
   return (
     <>
       <Helmet>
-      <title>Phonebook</title>
+        <title>Phonebook</title>
       </Helmet>
       <ContactForm />
       <div>{loading && 'Loading contacts...'}</div>

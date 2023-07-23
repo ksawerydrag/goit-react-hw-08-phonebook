@@ -14,12 +14,20 @@ export const register = createAsyncThunk(
   'auth/register',
   async ({ name, email, password }, thunkApi) => {
     try {
-      const response = await axios.post('/users/signup', { name, email, password });
+      const response = await axios.post('/users/signup', {
+        name,
+        email,
+        password,
+      });
       const token = response.data.token;
       setAuthHeader(token);
       return response.data;
     } catch (error) {
-      return thunkApi.rejectWithValue(window.alert(`Ooops, something went wrong... Your email is already registered or your password does not contain at least 7 characters`));
+      return thunkApi.rejectWithValue(
+        window.alert(
+          `Ooops, something went wrong... Please try again.`
+        )
+      );
     }
   }
 );
@@ -33,11 +41,14 @@ export const logIn = createAsyncThunk(
       setAuthHeader(token);
       return response.data;
     } catch (error) {
-      return thunkApi.rejectWithValue(window.alert(`Ooops, something went wrong... Incorrect email or password. Are you sure you've already registered?`));
+      return thunkApi.rejectWithValue(
+        window.alert(
+          `Ooops, something went wrong... Incorrect email or password. If you don't have an account, you can register now.`
+        )
+      );
     }
   }
 );
-
 
 export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   try {
@@ -47,7 +58,6 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
     return thunkAPI.rejectWithValue(error.message);
   }
 });
-
 
 export const refreshUser = createAsyncThunk(
   'auth/refresh',

@@ -41,7 +41,9 @@ export const ContactForm = () => {
         title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
         required
       />
-      <button className={css.btnStyle} type="submit">Add contact</button>
+      <button className={css.btnStyle} type="submit">
+        Add contact
+      </button>
     </form>
   );
 };

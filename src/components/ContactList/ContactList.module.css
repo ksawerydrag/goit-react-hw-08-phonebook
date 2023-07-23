@@ -4,8 +4,8 @@
 }
 
 .contactList {
-    list-style: url('/public/phone-signal-svgrepo-com.svg');
-    padding-left: 50px;
-    margin: 0;
-    margin-bottom: 20px;
+  list-style: url('/public/phone-signal-svgrepo-com.svg');
+  padding-left: 50px;
+  margin: 0;
+  margin-bottom: 20px;
 }

@@ -1,11 +1,11 @@
 .navLink {
   width: 100px;
-    display: inline-block;
-    text-decoration: none;
-    text-align: center;
-    align-items: center;
-    padding: 15px;
-    border-radius: 4px;
-    font-weight: 700;
-    color: #000000;
-  }
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 4px;
+  font-weight: 700;
+  color: #000000;
+}

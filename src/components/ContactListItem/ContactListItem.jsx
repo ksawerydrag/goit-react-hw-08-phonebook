@@ -8,7 +8,7 @@ export const ContactListItem = ({ contact }) => {
 
   const handleDelete = () => {
     dispatch(deleteContact(contact.id));
-  }
+  };
 
   return (
     <div className={css.elemStyle}>
